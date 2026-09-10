@@ -4,65 +4,132 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maneet Mehta</title>
-  <meta name="description" content="Maneet Mehta is a Yale undergraduate studying statistics & data science and physics & philosophy, working on AI governance, bias in generative models, and human oversight of automated systems.">
+  <meta name="description" content="Personal website for Maneet Mehta, with experience notes, research, and contact links.">
+  <link rel="canonical" href="https://maneetmehta.com/">
+  <meta property="og:title" content="Maneet Mehta">
+  <meta property="og:description" content="Yale student working on AI governance, bias in generative models, and human oversight of automated systems.">
+  <meta property="og:url" content="https://maneetmehta.com/">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header class="site">
-      <a class="name" href="index.html">Maneet Mehta</a>
-      <nav class="site" aria-label="Site">
-        <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="resume.html">Résumé</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="notes.html">Notes</a></li>
-        <li><a href="interests.html">Interests</a></li>
-        </ul>
+  <main class="page-shell">
+    <section class="content-block" aria-label="Maneet Mehta personal website">
+      <a class="site-title" href="index.html">Maneet Mehta</a>
+
+      <nav class="section-nav" aria-label="Sections">
+        <button class="section-button" type="button" id="experience-toggle" aria-expanded="false" aria-controls="experience">experience</button>
+        <a class="section-button" href="research.html">research</a>
       </nav>
-    </header>
 
-    <main>
+      <div class="experience-panel" id="experience" hidden>
+        <h2>Now</h2>
+        <ul>
+          <li>
+            <div class="role"><span>Visiting Researcher, <a href="https://www.hertie-school.org/en/digital-governance">Centre for Digital Governance</a>, Hertie School</span><span class="when">2026 –</span></div>
+            <div class="org">Berlin · Prof. Joanna Bryson's group</div>
+            <p class="note">Leading a study of human oversight burdens and AI task allocation in public-sector administration. First-authoring the paper.</p>
+          </li>
+          <li>
+            <div class="role"><span>Undergraduate Learning Assistant, S&amp;DS 2380</span><span class="when">Fall 2026</span></div>
+            <div class="org">Yale Statistics &amp; Data Science · Probability and Bayesian Statistics</div>
+          </li>
+          <li>
+            <div class="role"><span>Analyst, Yale Undergraduate Consulting Group</span><span class="when">2025 –</span></div>
+            <p class="note">Market sizing and positioning strategy for a public fintech company; a ten-year return model and impact framework for a West African cocoa venture.</p>
+          </li>
+        </ul>
 
-      <h1>Hello, I'm Maneet.</h1>
-      <p class="lede">I'm a sophomore at Yale (Branford College, Class of 2029) studying Statistics &amp; Data Science and Physics &amp; Philosophy. I work on questions at the intersection of artificial intelligence, governance, and ethics: how generative models encode bias, how public institutions should divide work between people and automated systems, and what human oversight actually costs.</p>
+        <h2>Before</h2>
+        <ul>
+          <li>
+            <div class="role"><span>Researcher, University of Maryland</span><span class="when">2024 – 2026</span></div>
+            <div class="org">with Dr. Cody Buntain</div>
+            <p class="note">First-authored a study of emotion bias in generative image models: annotation pipeline, fine-tuned ViT classifiers, bootstrapped TPR/FPR analysis on 10k prompt–image pairs.</p>
+          </li>
+          <li>
+            <div class="role"><span>Researcher, German Council on Foreign Relations / Yale Foreign Policy Initiative</span><span class="when">2025 – 2026</span></div>
+            <p class="note">Built a hybrid NLP pipeline over U.S. defense policy documents to track force-posture commitments to Europe.</p>
+          </li>
+          <li>
+            <div class="role"><span>Research Intern, Johns Hopkins Applied Physics Laboratory</span><span class="when">2023 – 2025</span></div>
+            <p class="note">Developed LockdownGPT, an adversarial-attack demonstration for LLMs, and computer vision for autonomous robot following.</p>
+          </li>
+          <li>
+            <div class="role"><span>Software Engineering Intern, Cosmos</span><span class="when">2024 – 2025</span></div>
+            <p class="note">Unity (C#) UI and debate-flow logic for an AI debate training platform.</p>
+          </li>
+        </ul>
 
-      <h2>Currently</h2>
-      <ul>
-        <li>Visiting researcher at the <a href="https://www.hertie-school.org/en/digital-governance">Centre for Digital Governance</a>, Hertie School (Berlin), in Prof. Joanna Bryson's group, leading a study of human oversight burdens and AI task allocation in public-sector administrative processes.</li>
-        <li>Undergraduate Learning Assistant for S&amp;DS 2380, Probability and Bayesian Statistics.</li>
-        <li>Analyst at the Yale Undergraduate Consulting Group; Senator and Dining Policy Chair on the Yale College Council; member of the Yale Debate Association and the Yale Foreign Policy Initiative; fellow with Yale AI Alignment.</li>
-      </ul>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <div class="role"><span>Yale University</span><span class="when">Class of 2029</span></div>
+            <div class="org">B.S. Statistics &amp; Data Science · B.A. Physics &amp; Philosophy</div>
+          </li>
+        </ul>
 
-      <h2>Previously</h2>
-      <ul>
-        <li>First-authored a study of emotion bias in generative image models with Dr. Cody Buntain at the University of Maryland (<a href="https://arxiv.org/abs/2411.05985">arXiv:2411.05985</a>).</li>
-        <li>Built a hybrid NLP pipeline for tracking U.S. force-posture commitments in defense policy documents with the German Council on Foreign Relations and the Yale Foreign Policy Initiative.</li>
-        <li>Developed LockdownGPT, an adversarial-attack demonstration for large language models, at the Johns Hopkins Applied Physics Laboratory.</li>
-        <li>Delegate to the 2025 U.S. Senate Youth Program; Eagle Scout and Maryland Eagle Scout of the Year (2025).</li>
-      </ul>
+        <h2>Elsewhere</h2>
+        <ul>
+          <li><p class="note">Yale College Council senator and Dining Policy Chair. Yale Debate Association. Yale Foreign Policy Initiative. Yale AI Alignment fellow.</p></li>
+          <li><p class="note">U.S. Senate Youth Program delegate (2025). Eagle Scout; Maryland Eagle Scout of the Year (2025). Lincoln–Douglas national top 20 (2023), Maryland state champion (2024).</p></li>
+        </ul>
 
-      <h2>Around this site</h2>
-      <ul>
-        <li><a href="resume.html">Résumé</a>: education, experience, and skills, with a PDF.</li>
-        <li><a href="research.html">Research</a>: papers, posters, and ongoing projects.</li>
-        <li><a href="notes.html">Notes</a>: memos and shorter writing.</li>
-        <li><a href="interests.html">Interests</a>: debate, scouting, reading, and everything off the résumé.</li>
-      </ul>
+        <p class="pdf"><a href="maneet-mehta-resume.pdf">résumé (pdf)</a></p>
+      </div>
 
-      <p>I grew up in Columbia, Maryland. The best way to reach me is by email at <a href="mailto:maneet.mehta@yale.edu">maneet.mehta@yale.edu</a>.</p>
+      <div class="bio-copy">
+        <p>I study Statistics &amp; Data Science and Physics &amp; Philosophy at Yale, with my attention on how public institutions should divide work between people and automated systems. This year, I'm working with the <a class="bio-link" href="https://www.hertie-school.org/en/digital-governance" target="_blank" rel="noreferrer">Hertie School</a> in Berlin on human oversight and AI task allocation in public administration.</p>
+        <p>Recently, I've <button type="button" class="bio-link" data-open-experience>worked</button> on bias in generative image models at the University of Maryland, built NLP pipelines for defense-policy analysis with the German Council on Foreign Relations, and red-teamed language models at the Johns Hopkins Applied Physics Laboratory.</p>
+        <p>In my free time, I enjoy competitive debate, lifting, and reading classical history and political philosophy.</p>
+      </div>
 
-    </main>
+      <div class="links" aria-label="Contact links">
+        <div class="contact-link-wrap">
+          <button type="button" class="contact-link" data-copy="maneet.mehta@yale.edu">Yale email</button>
+        </div>
+        <a href="https://linkedin.com/in/maneet-mehta" target="_blank" rel="noreferrer">linkedin</a>
+        <a href="https://github.com/mmaneet" target="_blank" rel="noreferrer">github</a>
+        <a href="https://scholar.google.com/citations?user=KrhZ-4UAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">google scholar</a>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site">
-      <ul>
-        <li><a href="mailto:maneet.mehta@yale.edu">Email</a></li>
-        <li><a href="https://linkedin.com/in/maneet-mehta">LinkedIn</a></li>
-        <li><a href="https://github.com/mmaneet">GitHub</a></li>
-        <li><a href="https://scholar.google.com/citations?user=KrhZ-4UAAAAJ&amp;hl=en">Google Scholar</a></li>
-      </ul>
-      <span>New Haven, CT</span>
-    </footer>
-  </div>
+  <script>
+    (function () {
+      var toggle = document.getElementById('experience-toggle');
+      var panel = document.getElementById('experience');
+      function setOpen(open) {
+        panel.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+      }
+      toggle.addEventListener('click', function () { setOpen(panel.hidden); });
+      document.querySelectorAll('[data-open-experience]').forEach(function (b) {
+        b.addEventListener('click', function () { setOpen(true); panel.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+      });
+      if (location.hash === '#experience') setOpen(true);
+
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var addr = btn.getAttribute('data-copy');
+          var wrap = btn.parentNode;
+          function done(msg) {
+            var old = wrap.querySelector('.copied');
+            if (old) old.remove();
+            var s = document.createElement('span');
+            s.className = 'copied';
+            s.textContent = msg;
+            wrap.appendChild(s);
+            setTimeout(function () { s.remove(); }, 1800);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(addr).then(function () { done('copied ' + addr); }, function () { location.href = 'mailto:' + addr; });
+          } else {
+            location.href = 'mailto:' + addr;
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
