@@ -1,34 +1,68 @@
-t<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Maneet Mehta — Site in Progress</title>
-  <style>
-    body{
-      display:flex;
-      min-height:100vh;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      font-family:system-ui,sans-serif;
-      background:#f6f8fa;
-      margin:0;
-      text-align:center;
-    }
-    h1{
-      font-size:clamp(2rem,4vw,3.5rem);
-      color:#333;
-      margin-bottom:0.5rem;
-    }
-    p{
-      font-size:clamp(0.9rem,2.5vw,1.1rem);
-      color:#555;
-      margin:0;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maneet Mehta</title>
+  <meta name="description" content="Maneet Mehta is a Yale undergraduate studying statistics & data science and physics & philosophy, working on AI governance, bias in generative models, and human oversight of automated systems.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚧 Site under construction 🚧</h1>
-  <p>In the interim, please reach out to <a href="mailto:maneet.mehta@yale.edu">maneet.mehta@yale.edu</a> with any inquiries.</p>
+  <div class="wrap">
+    <header class="site">
+      <a class="name" href="index.html">Maneet Mehta</a>
+      <nav class="site" aria-label="Site">
+        <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <h1>Hello, I'm Maneet.</h1>
+      <p class="lede">I'm a sophomore at Yale (Branford College, Class of 2029) studying Statistics &amp; Data Science and Physics &amp; Philosophy. I work on questions at the intersection of artificial intelligence, governance, and ethics: how generative models encode bias, how public institutions should divide work between people and automated systems, and what human oversight actually costs.</p>
+
+      <h2>Currently</h2>
+      <ul>
+        <li>Visiting researcher at the <a href="https://www.hertie-school.org/en/digital-governance">Centre for Digital Governance</a>, Hertie School (Berlin), in Prof. Joanna Bryson's group, leading a study of human oversight burdens and AI task allocation in public-sector administrative processes.</li>
+        <li>Undergraduate Learning Assistant for S&amp;DS 2380, Probability and Bayesian Statistics.</li>
+        <li>Analyst at the Yale Undergraduate Consulting Group; Senator and Dining Policy Chair on the Yale College Council; member of the Yale Debate Association and the Yale Foreign Policy Initiative; fellow with Yale AI Alignment.</li>
+      </ul>
+
+      <h2>Previously</h2>
+      <ul>
+        <li>First-authored a study of emotion bias in generative image models with Dr. Cody Buntain at the University of Maryland (<a href="https://arxiv.org/abs/2411.05985">arXiv:2411.05985</a>).</li>
+        <li>Built a hybrid NLP pipeline for tracking U.S. force-posture commitments in defense policy documents with the German Council on Foreign Relations and the Yale Foreign Policy Initiative.</li>
+        <li>Developed LockdownGPT, an adversarial-attack demonstration for large language models, at the Johns Hopkins Applied Physics Laboratory.</li>
+        <li>Delegate to the 2025 U.S. Senate Youth Program; Eagle Scout and Maryland Eagle Scout of the Year (2025).</li>
+      </ul>
+
+      <h2>Around this site</h2>
+      <ul>
+        <li><a href="resume.html">Résumé</a>: education, experience, and skills, with a PDF.</li>
+        <li><a href="research.html">Research</a>: papers, posters, and ongoing projects.</li>
+        <li><a href="notes.html">Notes</a>: memos and shorter writing.</li>
+        <li><a href="interests.html">Interests</a>: debate, scouting, reading, and everything off the résumé.</li>
+      </ul>
+
+      <p>I grew up in Columbia, Maryland. The best way to reach me is by email at <a href="mailto:maneet.mehta@yale.edu">maneet.mehta@yale.edu</a>.</p>
+
+    </main>
+
+    <footer class="site">
+      <ul>
+        <li><a href="mailto:maneet.mehta@yale.edu">Email</a></li>
+        <li><a href="https://linkedin.com/in/maneet-mehta">LinkedIn</a></li>
+        <li><a href="https://github.com/mmaneet">GitHub</a></li>
+        <li><a href="https://scholar.google.com/citations?user=KrhZ-4UAAAAJ&amp;hl=en">Google Scholar</a></li>
+      </ul>
+      <span>New Haven, CT</span>
+    </footer>
+  </div>
 </body>
 </html>
