@@ -6,6 +6,14 @@
   <title>research · Maneet Mehta</title>
   <meta name="description" content="Research by Maneet Mehta on LLM explanation faithfulness, emotional bias in image-generation models, AI delegation in public administration, and NLP for defense policy analysis.">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <main class="page-shell">
@@ -15,6 +23,7 @@
       <nav class="section-nav" aria-label="Sections">
         <a class="section-button" href="index.html#experience">experience</a>
         <a class="section-button" href="research.html" aria-current="page">research</a>
+        <button class="section-button theme-toggle" type="button" id="theme-toggle" aria-label="Toggle dark mode"><span class="when-light">dark mode</span><span class="when-dark">light mode</span></button>
       </nav>
 
       <p>My research so far sits where machine learning meets its social consequences: measuring bias in generative models, testing whether language models explain themselves faithfully, and studying how institutions should decide which decisions to hand to automated systems.</p>
@@ -73,5 +82,21 @@
       <p class="meta">Full list on <a href="https://scholar.google.com/citations?user=KrhZ-4UAAAAJ&amp;hl=en">Google Scholar</a>.</p>
     </section>
   </main>
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var root = document.documentElement;
+      function current() {
+        var t = root.getAttribute('data-theme');
+        if (t) return t;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>

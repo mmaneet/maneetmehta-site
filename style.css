@@ -7,8 +7,9 @@
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #141414; --fg: #ebebeb; --muted: #9a9a9a; --rule: #2e2e2e; --link: #ebebeb; }
+  :root:not([data-theme="light"]) { --bg: #141414; --fg: #ebebeb; --muted: #9a9a9a; --rule: #2e2e2e; --link: #ebebeb; }
 }
+:root[data-theme="dark"] { --bg: #141414; --fg: #ebebeb; --muted: #9a9a9a; --rule: #2e2e2e; --link: #ebebeb; }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -38,7 +39,16 @@ body {
 }
 a.site-title:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 
-.section-nav { display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin-bottom: 2rem; }
+.section-nav { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 1.25rem; margin-bottom: 2rem; }
+.theme-toggle { margin-left: auto; }
+.theme-toggle .when-dark { display: none; }
+:root[data-theme="dark"] .theme-toggle .when-dark { display: inline; }
+:root[data-theme="dark"] .theme-toggle .when-light { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .when-dark { display: inline; }
+  :root:not([data-theme="light"]) .theme-toggle .when-light { display: none; }
+}
+.avatar { display: block; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; margin: 0 0 1rem; }
 .section-button {
   font: inherit;
   font-size: 0.95rem;

@@ -11,6 +11,14 @@
   <meta property="og:url" content="https://maneetmehta.com/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <main class="page-shell">
@@ -20,6 +28,7 @@
       <nav class="section-nav" aria-label="Sections">
         <button class="section-button" type="button" id="experience-toggle" aria-expanded="false" aria-controls="experience">experience</button>
         <a class="section-button" href="research.html">research</a>
+        <button class="section-button theme-toggle" type="button" id="theme-toggle" aria-label="Toggle dark mode"><span class="when-light">dark mode</span><span class="when-dark">light mode</span></button>
       </nav>
 
       <div class="experience-panel" id="experience" hidden>
@@ -147,6 +156,22 @@
             location.href = 'mailto:' + addr;
           }
         });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var root = document.documentElement;
+      function current() {
+        var t = root.getAttribute('data-theme');
+        if (t) return t;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
       });
     })();
   </script>
