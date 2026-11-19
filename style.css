@@ -109,6 +109,8 @@ a.site-title:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .experience-panel .org { color: var(--muted); font-size: 0.95rem; }
 .experience-panel .note { font-size: 0.95rem; margin: 0.15rem 0 0; }
 .experience-panel .pdf { font-size: 0.95rem; margin-top: 1.5rem; }
+.experience-panel .pdf.top { margin: 0 0 1.25rem; }
+.experience-panel .pdf.top + h2 { margin-top: 0; }
 .experience-panel a { color: var(--fg); text-decoration: underline; text-underline-offset: 0.18em; text-decoration-color: var(--muted); }
 .experience-panel a:hover { text-decoration-color: var(--fg); }
 
