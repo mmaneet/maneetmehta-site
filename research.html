@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>research · Maneet Mehta</title>
-  <meta name="description" content="Research by Maneet Mehta on bias in generative image models, adversarial attacks on LLMs, AI task allocation in public administration, and NLP for defense policy analysis.">
+  <meta name="description" content="Research by Maneet Mehta on LLM explanation faithfulness, emotional bias in image-generation models, AI delegation in public administration, and NLP for defense policy analysis.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,28 +17,38 @@
         <a class="section-button" href="research.html" aria-current="page">research</a>
       </nav>
 
-      <p>My research so far sits where machine learning meets its social consequences: measuring bias in generative models, probing how language models fail under adversarial pressure, and studying how public institutions should decide which tasks to hand to automated systems.</p>
+      <p>My research so far sits where machine learning meets its social consequences: measuring bias in generative models, testing whether language models explain themselves faithfully, and studying how institutions should decide which decisions to hand to automated systems.</p>
 
       <h2>Papers &amp; Posters</h2>
       <ul>
         <li>
-          <div class="title"><a href="https://arxiv.org/abs/2411.05985">Assessing Emotions in Images and Potential Biases in Generative Models</a></div>
-          <div class="meta">First author · arXiv:2411.05985 · with Cody Buntain, University of Maryland · 2025</div>
-          <p>Formalizes a TPR/FPR-based framework for measuring emotion bias in text-to-image models. Across roughly 10,000 prompt–image pairs, finds a consistent and robust bias toward fear in generated images, validated across model architectures and against human annotation.</p>
+          <div class="title"><a href="https://arxiv.org/abs/2411.05985">Generating Fearful Images: Emotional Biases in Image-Generation Models</a></div>
+          <div class="meta">First author · arXiv:2411.05985 · with Cody Buntain, University of Maryland</div>
+          <p>Quantifies systematic emotional bias in text-to-image models. Per-emotion true- and false-positive rates over 10,000 prompt–image pairs, with bootstrapped 95% confidence intervals, across Stable Diffusion, SDXL, and GPT-Image-1.5. Emotion classifiers were fine-tuned ViT, Swin, and ConvNeXT models trained on 118k images and validated against human review.</p>
+        </li>
+        <li>
+          <div class="title">Breaking into the Playground of Privilege</div>
+          <div class="meta">Sole author · Journal of Student Research 13(3) · 2024</div>
+          <p>A literature review and expert interviews on why nomination-based screening, biased testing, and socioeconomic barriers under-identify minority students for Gifted and Talented programs, with recommendations for universal screening and local norming.</p>
         </li>
         <li>
           <div class="title">LockdownGPT: Assessing Adversarial Attacks on LLMs</div>
-          <div class="meta">Poster · Johns Hopkins Applied Physics Laboratory Showcase · 2025 · internal, available on request</div>
-          <p>A technical demonstration of systemic vulnerabilities that large language models face across their development lifecycle: jailbreak classes, red-team prompts, and stress tests of common guardrails. Presented to government officials including the former Deputy CTO of the White House Office of Science and Technology Policy.</p>
+          <div class="meta">Poster · Johns Hopkins Applied Physics Laboratory · 2025 · internal, available on request</div>
+          <p>A demonstration of adversarial attacks on LLMs, covering three jailbreak classes and twenty red-team prompts against frontier guardrails. Presented to government officials including the former Deputy CTO of the White House Office of Science and Technology Policy.</p>
         </li>
       </ul>
 
       <h2>In Progress</h2>
       <ul>
         <li>
-          <div class="title">Human oversight burdens and AI task allocation in public administration</div>
-          <div class="meta">Centre for Digital Governance, Hertie School · Prof. Joanna Bryson's group · 2026 –</div>
-          <p>A conceptual and empirical study of how administrative processes should divide work between officials and automated systems, and what meaningful human oversight costs in practice. I lead the project and am first-authoring the paper with Chris Schmitz and a colleague.</p>
+          <div class="title">Faithfulness of LLM self-explanations</div>
+          <div class="meta">Supervised Program for Alignment Research · Sep 2026 –</div>
+          <p>Four controlled experiments on counterfactual simulatability techniques, showing that a widely used metric is confounded by up to 31 percentage points of inference-pipeline noise. I built the multi-provider evaluation harness, roughly 25,000 calls across five models, and led the midterm report.</p>
+        </li>
+        <li>
+          <div class="title">When should institutions delegate decisions to AI?</div>
+          <div class="meta">Centre for Digital Governance, Hertie School · with Prof. Joanna J. Bryson · manuscript in preparation</div>
+          <p>A decision framework for delegation to AI given the cost of human oversight, grounded in an LLM-assisted classification of 3,700+ government AI deployments from U.S., German, and Dutch public inventories.</p>
         </li>
       </ul>
 
@@ -46,22 +56,17 @@
       <ul>
         <li>
           <div class="title">NLP pipeline for U.S. defense posture analysis</div>
-          <div class="meta">German Council on Foreign Relations / Yale Foreign Policy Initiative · 2025 – 2026</div>
-          <p>Semantic filtering, LLM-based structured extraction, HDBSCAN clustering, and narrative synthesis over NDAAs, National Security Strategies, and National Defense Strategies, tracking shifts in U.S. force-posture commitments to Europe.</p>
-        </li>
-        <li>
-          <div class="title">Computer vision for autonomous following</div>
-          <div class="meta">Johns Hopkins Applied Physics Laboratory · 2023 – 2025</div>
-          <p>A full-pipeline neural-network image classifier and a computer vision program that let robots autonomously follow target items.</p>
+          <div class="meta">German Council on Foreign Relations · 2025 – 2026</div>
+          <p>Semantic filtering, LLM structured extraction, and HDBSCAN clustering over 3,000+ pages of NDAAs, National Security Strategies, and National Defense Strategies, producing seven narrative clusters and funding-trend analyses of U.S. posture in Europe and the Indo-Pacific.</p>
         </li>
       </ul>
 
-      <h2>Writing</h2>
+      <h2>Projects</h2>
       <ul>
         <li>
-          <div class="title"><a href="yfpi-report.pdf">The Strategic Posture Commission and the two-adversary problem</a></div>
-          <div class="meta">Memo · Yale Foreign Policy Initiative · December 2025 · PDF</div>
-          <p>A brief on the Commission's argument that the United States must be prepared to deter near-simultaneous challenges from two nuclear adversaries, and what that implies for nuclear strategy, force structure, and the nuclear enterprise.</p>
+          <div class="title"><a href="https://lunchtag.yaledebate.org">LunchTag</a></div>
+          <div class="meta">Yale Debate Association · Python, Flask, Postgres, Slack API · 2026</div>
+          <p>A weekly meal-pairing platform for the team's seventy-plus members. The pairing engine minimizes a four-term penalty over randomized greedy candidates with softmax-sampled partners, backed by a hundred-plus unit and integration tests.</p>
         </li>
       </ul>
 
