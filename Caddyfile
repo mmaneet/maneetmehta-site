@@ -1,0 +1,18 @@
+{
+	auto_https off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip
+	file_server
+
+	# Long cache for static assets, short for HTML
+	@static path *.css *.jpg *.pdf
+	header @static Cache-Control "public, max-age=86400"
+	header /*.html Cache-Control "public, max-age=300"
+	header /     Cache-Control "public, max-age=300"
+
+	# Clean URLs: /research -> research.html
+	try_files {path} {path}.html
+}
