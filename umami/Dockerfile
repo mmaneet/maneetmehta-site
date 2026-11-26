@@ -3,16 +3,17 @@
 # Adapted from https://github.com/umami-software/umami/blob/v3.5.0/Dockerfile:
 # the only change is that sources come from a git clone stage instead of the build context.
 ARG UMAMI_VERSION="v3.5.0"
-FROM alpine/git:latest AS src
-ARG UMAMI_VERSION
-RUN git clone --depth 1 --branch ${UMAMI_VERSION} https://github.com/umami-software/umami.git /src
-
 ARG NODE_IMAGE_VERSION="22.23.4-alpine"
 ARG PNPM_VERSION="12.3.4"
 # Keep in sync with the prisma/@prisma/* versions in package.json
 ARG PRISMA_VERSION="7.10.0"
 
 # Install dependencies only when needed
+
+FROM alpine/git:latest AS src
+ARG UMAMI_VERSION
+RUN git clone --depth 1 --branch ${UMAMI_VERSION} https://github.com/umami-software/umami.git /src
+
 FROM node:${NODE_IMAGE_VERSION} AS deps
 ARG PNPM_VERSION
 
