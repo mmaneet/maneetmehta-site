@@ -27,6 +27,7 @@ body {
   padding: clamp(3rem, 12vh, 8rem) 1.25rem 4rem;
 }
 .content-block { width: 100%; max-width: 34rem; }
+.content-block.wide { max-width: 52rem; }
 
 .site-title {
   display: inline-block;
@@ -48,7 +49,29 @@ a.site-title:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   :root:not([data-theme="light"]) .theme-toggle .when-dark { display: inline; }
   :root:not([data-theme="light"]) .theme-toggle .when-light { display: none; }
 }
-.avatar { display: block; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; margin: 0 0 1rem; }
+.avatar { display: block; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 0 1.25rem; }
+
+/* Two-column home layout: bio + links on the left, glance + reading on the right */
+.columns { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 2.5rem; align-items: start; }
+.sidebar { font-size: 0.95rem; }
+.sidebar h2 { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.6rem; }
+.sidebar hr { border: 0; border-top: 1px solid var(--rule); margin: 1.4rem 0; }
+.sidebar ul { list-style: none; margin: 0; padding: 0; }
+.sidebar li { position: relative; padding-left: 1rem; margin: 0 0 0.4rem; line-height: 1.45; }
+.sidebar li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+.reading li { margin-bottom: 0.6rem; }
+.reading .more { margin-top: 0.8rem; }
+.reading .more::before { display: none; }
+.reading .more { padding-left: 0; }
+.reading .more a { color: var(--muted); text-decoration: none; }
+.reading .more a:hover { color: var(--fg); text-decoration: underline; }
+.reading .by { display: block; color: var(--muted); font-size: 0.85rem; }
+.reading a { color: var(--fg); text-decoration: underline; text-underline-offset: 0.18em; text-decoration-color: var(--muted); }
+.reading a:hover { text-decoration-color: var(--fg); }
+@media (max-width: 720px) {
+  .columns { grid-template-columns: 1fr; gap: 2rem; }
+  .sidebar { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+}
 .section-button {
   font: inherit;
   font-size: 0.95rem;
