@@ -116,3 +116,7 @@ ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 
 CMD ["sh", "scripts/start-docker.sh"]
+
+# Railway's private network is IPv6-only and start-docker.sh pins HOSTNAME=0.0.0.0,
+# so run the same steps with a dual-stack listen address instead.
+CMD ["sh", "-c", "export PATH=\"$PWD/node_modules/.bin:$PATH\" && node scripts/check-db.js && node scripts/update-tracker.js && HOSTNAME=:: exec node server.js"]

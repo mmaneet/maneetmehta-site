@@ -3,16 +3,28 @@
 }
 
 :{$PORT:8080} {
-	root * /srv
 	encode gzip
-	file_server
 
-	# Long cache for static assets, short for HTML
-	@static path *.css *.jpg *.pdf
-	header @static Cache-Control "public, max-age=86400"
-	header /*.html Cache-Control "public, max-age=300"
-	header /     Cache-Control "public, max-age=300"
+	# Analytics dashboard + first-party tracker, proxied to the Umami service
+	# over Railway's private network. Umami's own login protects the dashboard.
+	handle /admin* {
+		header X-Robots-Tag "noindex, nofollow, noarchive"
+		reverse_proxy {$UMAMI_UPSTREAM:http://admin.railway.internal:3000} {
+			header_up Host {host}
+			header_up X-Forwarded-Proto {scheme}
+		}
+	}
 
-	# Clean URLs: /research -> research.html
-	try_files {path} {path}.html
+	handle {
+		root * /srv
+		file_server
+
+		@static path *.css *.jpg *.pdf
+		header @static Cache-Control "public, max-age=86400"
+		header /*.html Cache-Control "public, max-age=300"
+		header /     Cache-Control "public, max-age=300"
+
+		# Clean URLs: /research -> research.html
+		try_files {path} {path}.html
+	}
 }
