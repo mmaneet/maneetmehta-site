@@ -19,8 +19,9 @@
 		root * /srv
 		file_server
 
-		@static path *.css *.jpg *.pdf
+		@static path *.jpg *.pdf
 		header @static Cache-Control "public, max-age=86400"
+		header /style.css Cache-Control "public, max-age=600"
 		header /*.html Cache-Control "public, max-age=300"
 		header /     Cache-Control "public, max-age=300"
 

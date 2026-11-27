@@ -49,8 +49,6 @@ a.site-title:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   :root:not([data-theme="light"]) .theme-toggle .when-dark { display: inline; }
   :root:not([data-theme="light"]) .theme-toggle .when-light { display: none; }
 }
-.avatar { display: block; width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 0 1.25rem; }
-
 /* Two-column home layout: bio + links on the left, glance + reading on the right */
 .columns { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 2.5rem; align-items: start; }
 .sidebar { font-size: 0.95rem; }
